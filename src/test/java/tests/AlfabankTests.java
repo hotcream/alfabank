@@ -1,12 +1,6 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
-import pages.AlphaOnlinePage;
-import pages.CreditCardApplicationPage;
-import pages.MainPage;
-import pages.MobileAppPage;
-import pages.ResultsPage;
-import pages.StartClientPage;
 import utils.TestData;
 
 public class AlfabankTests extends BaseTest  {
@@ -15,9 +9,6 @@ public class AlfabankTests extends BaseTest  {
 
     @Test
     public void checkCreditCardFormOpeningTest() {
-
-        MainPage mainPage = new MainPage();
-        CreditCardApplicationPage creditCardApplicationPage = new CreditCardApplicationPage();
 
         mainPage.openMainPage()
                 .openCardsPopup()
@@ -29,10 +20,6 @@ public class AlfabankTests extends BaseTest  {
 
     @Test
     public void checkSearchResultTest() {
-
-        MainPage mainPage = new MainPage();
-        StartClientPage startClientPage = new StartClientPage();
-        ResultsPage resultsPage = new ResultsPage();
 
         mainPage.openMainPage()
                 .clickStartClientButton();
@@ -46,9 +33,6 @@ public class AlfabankTests extends BaseTest  {
     @Test
     public void checkRedirectToAlphaOnlineTest() {
 
-        MainPage mainPage = new MainPage();
-        AlphaOnlinePage alphaOnlinePage = new AlphaOnlinePage();
-
         mainPage.openMainPage()
                 .clickEnterButton()
                 .clickAlphaOnlineButton();
@@ -59,9 +43,6 @@ public class AlfabankTests extends BaseTest  {
 
     @Test
     public void checkEnterIncorrectUserDataTest() {
-
-        MainPage mainPage = new MainPage();
-        AlphaOnlinePage alphaOnlinePage = new AlphaOnlinePage();
 
         mainPage.openMainPage()
                 .clickEnterButton()
@@ -75,9 +56,6 @@ public class AlfabankTests extends BaseTest  {
 
     @Test
     public void checkOpenAndroidAppPageTest() {
-
-        MainPage mainPage = new MainPage();
-        MobileAppPage mobileAppPage = new MobileAppPage();
 
         mainPage.openMainPage()
                 .scrollToDownloadAppButton()

@@ -9,10 +9,23 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import pages.AlphaOnlinePage;
+import pages.CreditCardApplicationPage;
+import pages.MainPage;
+import pages.MobileAppPage;
+import pages.ResultsPage;
+import pages.StartClientPage;
 
 import java.util.Map;
 
 public class BaseTest {
+
+    MainPage mainPage = new MainPage();
+    StartClientPage startClientPage = new StartClientPage();
+    AlphaOnlinePage alphaOnlinePage = new AlphaOnlinePage();
+    ResultsPage resultsPage = new ResultsPage();
+    MobileAppPage mobileAppPage = new MobileAppPage();
+    CreditCardApplicationPage creditCardApplicationPage = new CreditCardApplicationPage();
 
     @BeforeAll
     static void beforeAll() {
