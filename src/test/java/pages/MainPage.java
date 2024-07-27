@@ -34,15 +34,13 @@ public class MainPage {
     }
 
     @Step("Click year grace card")
-    public MainPage clickYearGraceCard() {
+    public void clickYearGraceCard() {
         yearGraceCard.click();
-        return this;
     }
 
     @Step("Click start client button")
-    public MainPage clickStartClientButton() {
+    public void clickStartClientButton() {
         startClientButton.click();
-        return this;
     }
 
     @Step("Click enter button")
@@ -53,9 +51,8 @@ public class MainPage {
     }
 
     @Step("Click Alpha Online button")
-    public MainPage clickAlphaOnlineButton() {
+    public void clickAlphaOnlineButton() {
         alphaOnlineButton.click();
-        return this;
     }
 
     @Step
@@ -65,8 +62,7 @@ public class MainPage {
     }
 
     @Step
-    public MainPage clickDownloadAppButton() {
+    public void clickDownloadAppButton() {
         downloadAppButton.click();
-        return this;
     }
 }

@@ -9,7 +9,7 @@ public class AlphaBankTests extends BaseTest  {
     TestData testData = new TestData();
 
     @Test
-    @DisplayName("Check the search results")
+    @DisplayName("Check the opening of the credit card filling form")
     public void checkCreditCardFormOpeningTest() {
 
         mainPage.openMainPage()
