@@ -1,21 +1,25 @@
 package pages;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import tests.BaseTest;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.open;
 
-public class MainPage extends BaseTest {
+public class MainPage {
 
-    private final SelenideElement enterButton = $(byText("Войти")),
-            cardsButton = $("a[title='Карты']"),
+    private final SelenideElement enterButton = $x("//span[text()='Войти']"),
+            cardsPopupButton = $("a[title='Карты']"),
             yearGraceCard = $("a[title*='Целый год без']"),
-            searchButton = $("[data-test-id='Main-Header-Main-Desktop-container-right']").$("svg"),
-            searchInput = $("#[placeholder='Введите запрос']");
+            popup = $("[data-test-id='Main-Header-Main-Desktop-popover-container']"),
+            startClientButton = $("[data-test-id='Main-Header-Main-Desktop-container-right']")
+                    .$(byText("Стать клиентом")),
+            alphaOnlineButton = $x("//p[contains(text(), 'Войти в')]"),
+            downloadAppButton = $x("//span[text()='Скачайте приложение']");
 
     @Step("Open main page")
     public MainPage openMainPage() {
@@ -23,9 +27,9 @@ public class MainPage extends BaseTest {
         return this;
     }
 
-    @Step("Click cards button")
-    public MainPage clickCardsButton() {
-        cardsButton.click();
+    @Step("Open cards pop-up")
+    public MainPage openCardsPopup() {
+        cardsPopupButton.hover();
         return this;
     }
 
@@ -35,17 +39,34 @@ public class MainPage extends BaseTest {
         return this;
     }
 
-    @Step("Click year grace card")
-    public MainPage clickSearchButton() {
-        searchButton.click();
+    @Step("Click start client button")
+    public MainPage clickStartClientButton() {
+        startClientButton.click();
         return this;
     }
 
-    @Step("Click year grace card")
-    public MainPage enterSearchText(String text) {
-        searchInput.setValue(text).pressEnter();
+    @Step("Click enter button")
+    public MainPage clickEnterButton() {
+        Selenide.sleep(2000);
+        enterButton.click();
         return this;
     }
 
+    @Step("Click Alpha Online button")
+    public MainPage clickAlphaOnlineButton() {
+        alphaOnlineButton.click();
+        return this;
+    }
 
+    @Step
+    public MainPage scrollToDownloadAppButton() {
+        downloadAppButton.scrollTo();
+        return this;
+    }
+
+    @Step
+    public MainPage clickDownloadAppButton() {
+        downloadAppButton.click();
+        return this;
+    }
 }

@@ -21,26 +21,28 @@ public class BaseTest {
         Configuration.browserVersion = System.getProperty("version", "122");
         Configuration.baseUrl = "https://alfabank.ru/";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.remote = System.getProperty("remoteUrl");
+/*        Configuration.remote = System.getProperty("remoteUrl");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
                 "enableVideo", true
         ));
-        Configuration.browserCapabilities = capabilities;
+        Configuration.browserCapabilities = capabilities;*/
     }
 
     @BeforeEach
+/*
     void setUpBeforeEach() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
+*/
 
     @AfterEach
     void addAttachments() {
-        AllureAttachments.screenshotAs("Last screenshot");
+/*        AllureAttachments.screenshotAs("Last screenshot");
         AllureAttachments.pageSource();
         AllureAttachments.browserConsoleLogs();
-        AllureAttachments.addVideo();
+        AllureAttachments.addVideo();*/
         Selenide.closeWebDriver();
     }
 }
