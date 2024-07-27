@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import utils.TestData;
 
@@ -8,18 +9,20 @@ public class AlphaBankTests extends BaseTest  {
     TestData testData = new TestData();
 
     @Test
+    @DisplayName("Check the search results")
     public void checkCreditCardFormOpeningTest() {
 
         mainPage.openMainPage()
                 .openCardsPopup()
                 .clickYearGraceCard();
 
-        creditCardApplicationPage.scrollToFullNameInput()
+        creditCardApplicationPage.clickGetCardButton()
                 .checkFullNameInputIsVisible();
     }
 
     @Test
-    public void checkSearchResultTest() {
+    @DisplayName("Check the search results")
+    public void checkSearchResultsTest() {
 
         mainPage.openMainPage()
                 .clickStartClientButton();
@@ -31,6 +34,7 @@ public class AlphaBankTests extends BaseTest  {
     }
 
     @Test
+    @DisplayName("Check redirect to Alpha Online page")
     public void checkRedirectToAlphaOnlineTest() {
 
         mainPage.openMainPage()
@@ -42,7 +46,8 @@ public class AlphaBankTests extends BaseTest  {
     }
 
     @Test
-    public void checkEnterIncorrectUserDataTest() {
+    @DisplayName("Check entering incorrect user data in Alpha Online")
+    public void checkEnteringIncorrectUserDataTest() {
 
         mainPage.openMainPage()
                 .clickEnterButton()
@@ -55,6 +60,7 @@ public class AlphaBankTests extends BaseTest  {
     }
 
     @Test
+    @DisplayName("Check opening the Android app page")
     public void checkOpenAndroidAppPageTest() {
 
         mainPage.openMainPage()
