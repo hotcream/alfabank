@@ -3,7 +3,7 @@ package tests;
 import org.junit.jupiter.api.Test;
 import utils.TestData;
 
-public class AlfabankTests extends BaseTest  {
+public class AlphaBankTests extends BaseTest  {
 
     TestData testData = new TestData();
 
