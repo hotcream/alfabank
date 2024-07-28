@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 import utils.TestData;
 
 @Tag("regression")
-@DisplayName("Alphabank site UI tests")
-public class AlphaBankTests extends BaseTest  {
+@DisplayName("Alfabank site UI tests")
+public class AlfaBankTests extends BaseTest  {
 
     TestData testData = new TestData();
 
@@ -38,27 +38,27 @@ public class AlphaBankTests extends BaseTest  {
     }
 
     @Test
-    @DisplayName("Check redirect to Alpha Online page")
-    public void checkRedirectToAlphaOnlineTest() {
+    @DisplayName("Check redirect to Alfa Online page")
+    public void checkRedirectToAlfaOnlineTest() {
 
         mainPage.openMainPage()
                 .clickEnterButton()
-                .clickAlphaOnlineButton();
+                .clickAlfaOnlineButton();
 
-        alphaOnlinePage.checkAlphaOnlineTitle();
+        alfaOnlinePage.checkAlfaOnlineTitle();
 
     }
 
     @Test
     @Tag("negative")
-    @DisplayName("Check entering incorrect user data in Alpha Online")
+    @DisplayName("Check entering incorrect user data in Alfa Online")
     public void checkEnteringIncorrectUserDataTest() {
 
         mainPage.openMainPage()
                 .clickEnterButton()
-                .clickAlphaOnlineButton();
+                .clickAlfaOnlineButton();
 
-        alphaOnlinePage.setLogin(testData.randomLogin)
+        alfaOnlinePage.setLogin(testData.randomLogin)
                 .setPassword(testData.randomPassword)
                 .clickAuthorisationButton()
                 .checkErrorMessageIsVisible();

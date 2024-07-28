@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
-public class AlphaOnlinePage {
+public class AlfaOnlinePage {
 
     private final SelenideElement title = $(byText("Привет!")),
             loginField = $("[aria-label='Логин']"),
@@ -16,32 +16,32 @@ public class AlphaOnlinePage {
             errorMessage = $(byText("Некорректные данные"));
 
 
-    @Step("Check Alpha Online title")
-    public AlphaOnlinePage checkAlphaOnlineTitle() {
+    @Step("Check Alfa Online title")
+    public AlfaOnlinePage checkAlfaOnlineTitle() {
         title.shouldBe(visible);
         return this;
     }
 
     @Step("Set login")
-    public AlphaOnlinePage setLogin(String login) {
+    public AlfaOnlinePage setLogin(String login) {
         loginField.setValue(login);
         return this;
     }
 
     @Step("Set password")
-    public AlphaOnlinePage setPassword(String password) {
+    public AlfaOnlinePage setPassword(String password) {
         passwordField.setValue(password);
         return this;
     }
 
     @Step("Click the authorization button")
-    public AlphaOnlinePage clickAuthorisationButton() {
+    public AlfaOnlinePage clickAuthorisationButton() {
         authorisationButton.click();
         return this;
     }
 
     @Step("Check the error message")
-    public AlphaOnlinePage checkErrorMessageIsVisible() {
+    public AlfaOnlinePage checkErrorMessageIsVisible() {
         errorMessage.shouldBe(visible);
         return this;
     }

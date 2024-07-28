@@ -17,7 +17,7 @@ public class BaseTest {
 
     MainPage mainPage = new MainPage();
     StartClientPage startClientPage = new StartClientPage();
-    AlphaOnlinePage alphaOnlinePage = new AlphaOnlinePage();
+    AlfaOnlinePage alfaOnlinePage = new AlfaOnlinePage();
     ResultsPage resultsPage = new ResultsPage();
     MobileAppPage mobileAppPage = new MobileAppPage();
     CreditCardApplicationPage creditCardApplicationPage = new CreditCardApplicationPage();
