@@ -9,12 +9,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import pages.AlphaOnlinePage;
-import pages.CreditCardApplicationPage;
-import pages.MainPage;
-import pages.MobileAppPage;
-import pages.ResultsPage;
-import pages.StartClientPage;
+import pages.*;
 
 import java.util.Map;
 
@@ -47,7 +42,6 @@ public class BaseTest {
     void setUpBeforeEach() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
-
 
     @AfterEach
     void addAttachments() {
