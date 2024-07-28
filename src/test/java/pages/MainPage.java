@@ -18,7 +18,7 @@ public class MainPage {
             popup = $("[data-test-id='Main-Header-Main-Desktop-popover-container']"),
             startClientButton = $("[data-test-id='Main-Header-Main-Desktop-container-right']")
                     .$(byText("Стать клиентом")),
-            alphaOnlineButton = $x("//p[contains(text(), 'Войти в')]"),
+            alfaOnlineButton = $x("//p[contains(text(), 'Войти в')]"),
             downloadAppButton = $x("//span[text()='Скачайте приложение']");
 
     @Step("Open the main page")
@@ -50,10 +50,10 @@ public class MainPage {
         return this;
     }
 
-    @Step("Click the Alpha Online button")
-    public void clickAlphaOnlineButton() {
+    @Step("Click the Alfa Online button")
+    public void clickAlfaOnlineButton() {
         Selenide.sleep(2000);
-        alphaOnlineButton.click();
+        alfaOnlineButton.click();
     }
 
     @Step("Click the download app button")
