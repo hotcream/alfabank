@@ -22,25 +22,25 @@ public class AlphaOnlinePage {
         return this;
     }
 
-    @Step("Check Alpha Online title")
+    @Step("Set login")
     public AlphaOnlinePage setLogin(String login) {
         loginField.setValue(login);
         return this;
     }
 
-    @Step("Check Alpha Online title")
+    @Step("Set password")
     public AlphaOnlinePage setPassword(String password) {
         passwordField.setValue(password);
         return this;
     }
 
-    @Step("Check Alpha Online title")
+    @Step("Click the authorization button")
     public AlphaOnlinePage clickAuthorisationButton() {
         authorisationButton.click();
         return this;
     }
 
-    @Step("Check Alpha Online title")
+    @Step("Check the error message")
     public AlphaOnlinePage checkErrorMessageIsVisible() {
         errorMessage.shouldBe(visible);
         return this;

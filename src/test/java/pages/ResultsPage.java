@@ -11,7 +11,7 @@ public class ResultsPage {
 
     private final ElementsCollection results = $$("yass-span");
 
-    @Step("Check search result")
+    @Step("Check the search result")
     public void checkSearchResult(String text) {
         results.findBy(text(text)).shouldBe(visible);
     }

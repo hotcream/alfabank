@@ -13,13 +13,13 @@ public class CreditCardsCommonPage {
     private final String creditCardsCommonPath = "/get-money/credit-cards/";
     private final SelenideElement getCardButton = $(byText("Оформить карту"));
 
-    @Step("Open credit cards common page")
+    @Step("Open the credit cards common page")
     public CreditCardsCommonPage openCreditCardsCommonPage() {
         open(baseUrl + creditCardsCommonPath);
         return this;
     }
 
-    @Step("Click get credit card button")
+    @Step("Click the get credit card button")
     public CreditCardsCommonPage clickGetCreditCardButton() {
         getCardButton.click();
         return this;

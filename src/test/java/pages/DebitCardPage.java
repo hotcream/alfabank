@@ -14,7 +14,7 @@ public class DebitCardPage {
 
     private final SelenideElement getCard = $(byText("Получить карту"));
 
-    @Step("Open debit card page")
+    @Step("Open the debit card page")
     public DebitCardPage openDebitCardPage() {
         open(baseUrl + debitCardPath);
         return this;

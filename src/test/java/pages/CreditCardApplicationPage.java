@@ -16,19 +16,19 @@ public class CreditCardApplicationPage {
     private final SelenideElement fullNameInput = $("[data-test-id='field-FIO-placeholder']"),
             getCardButton = $$x("//span[text()='Получить карту']").first();
 
-    @Step("Open credit card application page")
+    @Step("Open the credit card application page")
     public CreditCardApplicationPage openCreditCardApplicationPage() {
         open(baseUrl + creditCardApplicationPath);
         return this;
     }
 
-    @Step("Click get card button")
+    @Step("Click the get card button")
     public CreditCardApplicationPage clickGetCardButton() {
         getCardButton.click();
         return this;
     }
 
-    @Step("Check full name is visible")
+    @Step("Check the full name is visible")
     public void checkFullNameInputIsVisible() {
         fullNameInput.shouldBe(visible);
     }

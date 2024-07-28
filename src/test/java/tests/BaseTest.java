@@ -44,18 +44,19 @@ public class BaseTest {
     }
 
     @BeforeEach
-/*
     void setUpBeforeEach() {
+/*
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
 */
+    }
+
 
     @AfterEach
     void addAttachments() {
-/*        AllureAttachments.screenshotAs("Last screenshot");
+        AllureAttachments.screenshotAs("Last screenshot");
         AllureAttachments.pageSource();
         AllureAttachments.browserConsoleLogs();
-        AllureAttachments.addVideo();*/
+        AllureAttachments.addVideo();
         Selenide.closeWebDriver();
     }
 }

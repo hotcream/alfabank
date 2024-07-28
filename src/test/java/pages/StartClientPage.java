@@ -10,13 +10,13 @@ public class StartClientPage {
 
     private final SelenideElement searchInput = $("[placeholder='Я ищу']");
 
-    @Step("Enter text into the search bar")
+    @Step("Enter the text into the search bar")
     public StartClientPage enterTextInSearchInput(String text) {
         searchInput.setValue(text).pressEnter();
         return this;
     }
 
-    @Step("Scroll to search bar")
+    @Step("Scroll to the search bar")
     public StartClientPage scrollToSearchBar() {
         Selenide.sleep(2000);
         searchInput.scrollTo();

@@ -13,13 +13,13 @@ public class MobileAppPage {
     private final SelenideElement instructions = $x("//a[text()='Для всех андроидов']"),
             installAppButton = $$(byText("Установить приложение")).first();
 
-    @Step("Click install app button")
+    @Step("Click the install app button")
     public MobileAppPage clickInstallAppButton() {
         installAppButton.click();
         return this;
     }
 
-    @Step("Check")
+    @Step("Check instructions should be visible")
     public MobileAppPage checkInstructionsIsVisible() {
         instructions.shouldBe(visible);
         return this;

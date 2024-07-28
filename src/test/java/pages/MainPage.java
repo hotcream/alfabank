@@ -21,48 +21,44 @@ public class MainPage {
             alphaOnlineButton = $x("//p[contains(text(), 'Войти в')]"),
             downloadAppButton = $x("//span[text()='Скачайте приложение']");
 
-    @Step("Open main page")
+    @Step("Open the main page")
     public MainPage openMainPage() {
         open(baseUrl);
         return this;
     }
 
-    @Step("Open cards pop-up")
+    @Step("Open the cards pop-up")
     public MainPage openCardsPopup() {
         cardsPopupButton.hover();
         return this;
     }
 
-    @Step("Click year grace card")
+    @Step("Click the year grace card")
     public void clickYearGraceCard() {
         yearGraceCard.click();
     }
 
-    @Step("Click start client button")
+    @Step("Click the start client button")
     public void clickStartClientButton() {
         startClientButton.click();
     }
 
-    @Step("Click enter button")
+    @Step("Click the enter button")
     public MainPage clickEnterButton() {
         Selenide.sleep(2000);
         enterButton.click();
         return this;
     }
 
-    @Step("Click Alpha Online button")
+    @Step("Click the Alpha Online button")
     public void clickAlphaOnlineButton() {
+        Selenide.sleep(2000);
         alphaOnlineButton.click();
     }
 
-    @Step
-    public MainPage scrollToDownloadAppButton() {
-        downloadAppButton.scrollTo();
-        return this;
-    }
-
-    @Step
+    @Step("Click the download app button")
     public void clickDownloadAppButton() {
         downloadAppButton.click();
     }
+
 }

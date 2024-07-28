@@ -1,9 +1,12 @@
 package tests;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import utils.TestData;
 
+@DisplayName("Alphabank site UI tests")
+@Tag("regress")
 public class AlphaBankTests extends BaseTest  {
 
     TestData testData = new TestData();
@@ -64,7 +67,6 @@ public class AlphaBankTests extends BaseTest  {
     public void checkOpenAndroidAppPageTest() {
 
         mainPage.openMainPage()
-                .scrollToDownloadAppButton()
                 .clickDownloadAppButton();
 
         mobileAppPage.clickInstallAppButton()
