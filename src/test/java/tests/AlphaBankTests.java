@@ -5,13 +5,14 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import utils.TestData;
 
+@Tag("regression")
 @DisplayName("Alphabank site UI tests")
-@Tag("regress")
 public class AlphaBankTests extends BaseTest  {
 
     TestData testData = new TestData();
 
     @Test
+    @Tag("smoke")
     @DisplayName("Check the opening of the credit card filling form")
     public void checkCreditCardFormOpeningTest() {
 
@@ -49,6 +50,7 @@ public class AlphaBankTests extends BaseTest  {
     }
 
     @Test
+    @Tag("negative")
     @DisplayName("Check entering incorrect user data in Alpha Online")
     public void checkEnteringIncorrectUserDataTest() {
 
