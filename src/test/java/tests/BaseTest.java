@@ -26,7 +26,7 @@ public class BaseTest {
     static void beforeAll() {
         Configuration.browserSize = System.getProperty("windowSize", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("version", "122");
+        Configuration.browserVersion = System.getProperty("browserVersion", "122");
         Configuration.baseUrl = "https://alfabank.ru/";
         Configuration.pageLoadStrategy = "eager";
         Configuration.remote = System.getProperty("remoteUrl");
