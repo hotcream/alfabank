@@ -74,5 +74,4 @@ public class AlfaBankTests extends BaseTest  {
         mobileAppPage.clickInstallAppButton()
                 .checkInstructionsIsVisible();
     }
-
 }
