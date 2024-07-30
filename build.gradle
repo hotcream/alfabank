@@ -45,12 +45,6 @@ tasks.withType(Test) {
             exceptionFormat "short"
         }
     }
-
-    if (System.getProperty("type") != null && !System.getProperty("type").isEmpty()) {
-        useJUnitPlatform {
-            includeTags System.getProperty("type")
-        }
-    }
 }
 
 tasks.register("smoke", Test) {
